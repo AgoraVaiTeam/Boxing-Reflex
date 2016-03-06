@@ -2,18 +2,12 @@
 using System.Collections;
 
 public class getScale : MonoBehaviour {
-
+    float descendo;
 	// Use this for initialization
 	void Start () {
-        //GetComponent<Animation>().
-            //GetComponent<AnimationClip>().frameRate = Random.Range(20.0f, 45.0f);
-        GetComponent<Animation>().Play();
-
-
+        GetComponent<Animation>()["AnimCirculo"].speed = Random.Range(0.5f,3.0f);
     }
 	
-	// Update is called once per frame
 	void Update () {
-        //sDebug.Log("Tamanho = " + transform.localScale);
 	}
 }

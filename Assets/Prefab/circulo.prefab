@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 467094}
   - 212: {fileID: 21203410}
-  - 111: {fileID: 11119050}
   - 114: {fileID: 11436768}
+  - 111: {fileID: 11185184}
   m_Layer: 0
   m_Name: circulo
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!111 &11119050
+--- !u!111 &11185184
 Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
