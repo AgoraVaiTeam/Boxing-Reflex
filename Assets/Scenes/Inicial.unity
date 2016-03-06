@@ -156,7 +156,6 @@ GameObject:
   - 224: {fileID: 697585909}
   - 222: {fileID: 697585912}
   - 114: {fileID: 697585911}
-  - 114: {fileID: 697585910}
   m_Layer: 5
   m_Name: Pontos
   m_TagString: Untagged
@@ -181,18 +180,6 @@ RectTransform:
   m_AnchoredPosition: {x: 4, y: 63}
   m_SizeDelta: {x: 379, y: 69}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &697585910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 697585908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a162cf8a76071d46890cabee145e9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recorde: {fileID: 1002974926}
 --- !u!114 &697585911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +231,7 @@ GameObject:
   - 114: {fileID: 786201398}
   - 114: {fileID: 786201397}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Botao Jogar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +294,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1902944699}
+      - m_Target: {fileID: 2037264691}
         m_MethodName: carregaFase
         m_Mode: 1
         m_Arguments:
@@ -505,7 +492,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Iniciar
+  m_Text: 'Jogar
 
 '
 --- !u!222 &975793344
@@ -587,50 +574,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1002974926}
---- !u!1 &1902944698
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1902944700}
-  - 114: {fileID: 1902944699}
-  m_Layer: 5
-  m_Name: Menu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1902944699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1902944698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464a82cf3931baf4caff8045c054e63f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &1902944700
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1902944698}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.029761905, y: 0.029761905, z: 0.029761905}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2037264686
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,8 +585,9 @@ GameObject:
   - 223: {fileID: 2037264689}
   - 114: {fileID: 2037264688}
   - 114: {fileID: 2037264687}
+  - 114: {fileID: 2037264691}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas Menu Inicial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,3 +668,16 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2037264691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2037264686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a162cf8a76071d46890cabee145e9c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoRecorde: {fileID: 1002974926}
+  textoPontuacao: {fileID: 697585908}

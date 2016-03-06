@@ -85,68 +85,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &442015707
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 464788, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464788, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464788, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464788, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464788, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464788, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464788, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 464788, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11422682, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: botao
-      value: 
-      objectReference: {fileID: 525547470}
-    - target: {fileID: 11422682, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: circulo
-      value: 
-      objectReference: {fileID: 175218, guid: 86b1acf0b6d78874fb87acd7e4cd713d, type: 2}
-    - target: {fileID: 11422682, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: intervalo
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11422682, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: animacao
-      value: 
-      objectReference: {fileID: 7400000, guid: f7c900ed465614349a3ba7fb9ee5e18a, type: 2}
-    - target: {fileID: 11422682, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-      propertyPath: playerHealthBar
-      value: 
-      objectReference: {fileID: 1410158266}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &461145722
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +168,6 @@ GameObject:
   - 224: {fileID: 503242591}
   - 222: {fileID: 503242594}
   - 114: {fileID: 503242593}
-  - 114: {fileID: 503242592}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -255,17 +192,6 @@ RectTransform:
   m_AnchoredPosition: {x: 254.53, y: -200}
   m_SizeDelta: {x: 217.11, y: 36}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &503242592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 503242590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a162cf8a76071d46890cabee145e9c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &503242593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +224,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Voce fez 0 pontos
+  m_Text: 
 --- !u!222 &503242594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -380,7 +306,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1527454015}
+      - m_Target: {fileID: 1520952307}
         m_MethodName: apertarBotao
         m_Mode: 1
         m_Arguments:
@@ -486,7 +412,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &794431499
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,15 +682,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &1527454013
+--- !u!1 &1520952306
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 165316, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-  m_PrefabInternal: {fileID: 442015707}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1527454014}
-  - 114: {fileID: 1527454015}
+  - 4: {fileID: 1520952308}
+  - 114: {fileID: 1520952307}
   m_Layer: 0
   m_Name: Mediador
   m_TagString: Untagged
@@ -772,25 +698,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1527454014
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 464788, guid: a8a6342e841ae3446b283ebf96faafa3, type: 2}
-  m_PrefabInternal: {fileID: 442015707}
-  m_GameObject: {fileID: 1527454013}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
---- !u!114 &1527454015
+--- !u!114 &1520952307
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11422682, guid: a8a6342e841ae3446b283ebf96faafa3,
-    type: 2}
-  m_PrefabInternal: {fileID: 442015707}
-  m_GameObject: {fileID: 1527454013}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520952306}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41d03c42e3645e94ba341ef4c66139db, type: 3}
@@ -800,7 +713,20 @@ MonoBehaviour:
   circulo: {fileID: 175218, guid: 86b1acf0b6d78874fb87acd7e4cd713d, type: 2}
   animacao: {fileID: 7400000, guid: f7c900ed465614349a3ba7fb9ee5e18a, type: 2}
   playerHealthBar: {fileID: 1410158266}
+  mostradorPontos: {fileID: 503242593}
   intervalo: 2
+--- !u!4 &1520952308
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520952306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1938529604
 GameObject:
   m_ObjectHideFlags: 0

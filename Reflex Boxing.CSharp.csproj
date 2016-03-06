@@ -63,10 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Canvas_Menu_Inicial.cs" />
+    <Compile Include="Assets\Scripts\ScriptCirculo.cs" />
     <Compile Include="Assets\Scripts\ScriptMediador.cs" />
     <Compile Include="Assets\Scripts\ScriptMenuRecordes.cs" />
-    <Compile Include="Assets\Scripts\ScriptRecorde.cs" />
-    <Compile Include="Assets\Scripts\getScale.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
