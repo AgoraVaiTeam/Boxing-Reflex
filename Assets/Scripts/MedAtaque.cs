@@ -21,17 +21,14 @@ public class MedAtaque : MonoBehaviour {
 
     // Use this for initialization
     void Update() {
-
         if (time > oldtime + intervalo) //show de gambiarras ou (instanciado == null)
         {
-            Debug.Log("start");
             oldCircInstanciado = circInstanciado;
             circInstanciado = criaCirculo();
             Destroy(oldCircInstanciado);
             oldtime = time;
         } else {
             time = time + Time.deltaTime;
-            Debug.Log("else");
         }
 
 
@@ -63,7 +60,8 @@ public class MedAtaque : MonoBehaviour {
                 tomarDano(circInstanciado.GetComponent<ICirculo>().pegaBaseDano(), playerHealthBar);// dano no player de acordo com o que ele ia tirar
             }
             Debug.Log(circInstanciado);
-            Debug.Log(hand);
+            Debug.Log("mão = " + hand);
+            Debug.Log("circ = " + circInstanciado.GetComponent<ICirculo>().tipo);
             Destroy(circInstanciado);
         }
     }
