@@ -157,7 +157,7 @@ GameObject:
   - 222: {fileID: 697585912}
   - 114: {fileID: 697585911}
   m_Layer: 5
-  m_Name: Pontos
+  m_Name: "Pontua\xE7\xE3o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -492,9 +492,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Jogar
-
-'
+  m_Text: Jogar
 --- !u!222 &975793344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -512,7 +510,7 @@ GameObject:
   - 222: {fileID: 1002974930}
   - 114: {fileID: 1002974929}
   m_Layer: 5
-  m_Name: Pontos Maximos
+  m_Name: Recorde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,7 +674,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2037264686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a162cf8a76071d46890cabee145e9c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 464a82cf3931baf4caff8045c054e63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textoRecorde: {fileID: 1002974926}
