@@ -9,8 +9,10 @@ public class TestadorUnity : MonoBehaviour {
 #if UNITY_EDITOR
         if (Input.GetKeyDown("d"))
             mediadorAtaque.botaoAtaque("DIREITA");
+            //mediadorAtaque.botaoAtaque("Right");
         if (Input.GetKeyDown("a"))
             mediadorAtaque.botaoAtaque("ESQUERDA");
+            //mediadorAtaque.botaoAtaque("Left");
 #endif
     }
 }

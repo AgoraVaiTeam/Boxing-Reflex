@@ -31,7 +31,6 @@ public class MedAtaque : MonoBehaviour {
             time = time + Time.deltaTime;
         }
 
-
         if ((circInstanciado != null) && (circInstanciado.transform.localScale.x == 0.0f)) {
             tomarDano(10.0f, playerHealthBar);
             Destroy(circInstanciado);
@@ -50,18 +49,18 @@ public class MedAtaque : MonoBehaviour {
         // se o circulo estiver instanciado
         if (circInstanciado != null) {
             // passa parâmetro para enumerador
-            var hand = handString.Contains("Left") ? DirectionEnum.Left : DirectionEnum.Right;
-
-            if (circInstanciado.GetComponent<ICirculo>().tipo == hand) {
+            //var hand = handString.Contains("Left") ? DirectionEnum.Left : DirectionEnum.Right;
+            var hand = handString;
+            if (circInstanciado.GetComponent<Circulo>().tipo == hand) {
                 // invoca função para dar dano no inimigo
-                tomarDano(circInstanciado.GetComponent<ICirculo>().pegaBaseDano(), inimigoHealthBar);
+                tomarDano(circInstanciado.GetComponent<Circulo>().pegaBaseDano(), inimigoHealthBar);
             } else {
                 // invoca função para dar dano no player
-                tomarDano(circInstanciado.GetComponent<ICirculo>().pegaBaseDano(), playerHealthBar);// dano no player de acordo com o que ele ia tirar
+                tomarDano(circInstanciado.GetComponent<Circulo>().pegaBaseDano(), playerHealthBar);// dano no player de acordo com o que ele ia tirar
             }
             Debug.Log(circInstanciado);
             Debug.Log("mão = " + hand);
-            Debug.Log("circ = " + circInstanciado.GetComponent<ICirculo>().tipo);
+            Debug.Log("circ = " + circInstanciado.GetComponent<Circulo>().tipo);
             Destroy(circInstanciado);
         }
     }

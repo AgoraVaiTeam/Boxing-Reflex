@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 487396}
-  - 114: {fileID: 11408484}
+  - 114: {fileID: 11464760}
   m_Layer: 0
   m_Name: CirculoDir
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11408484
+--- !u!114 &11464760
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
