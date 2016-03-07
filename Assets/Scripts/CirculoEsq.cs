@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Assets.Scripts.Enum;
 
 public class CirculoEsq : MonoBehaviour, ICirculo{
-    float descendo;
-    string tipo;
+    public DirectionEnum tipo { get; private set; }
 
-	void Start () {
-        tipo = "ESQUERDA";
+    void Start () {
+        tipo = DirectionEnum.Left;
         float speed = Random.Range(0.5f, 3.0f);
         GetComponent<Animation>()["AnimCirculo"].speed = speed;
     }
@@ -14,15 +13,9 @@ public class CirculoEsq : MonoBehaviour, ICirculo{
 	public float pegaTamanho() {
         return transform.localScale.x;
 	}
-    public string pegaTipo()
-    {
-        return tipo;
-    }
 
     public float pegaBaseDano()
     {
         return (1 - transform.localScale.x);
     }
- 
-
 }
