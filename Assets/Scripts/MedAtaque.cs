@@ -57,7 +57,7 @@ public class MedAtaque : MonoBehaviour {
 
             if (circInstanciado.GetComponent<ICirculo>().tipo == hand) {
                 // invoca função para dar dano no inimigo
-                tomarDano(circInstanciado.GetComponent<ICirculo>().pegaBaseDano() * 100, inimigoHealthBar);
+                tomarDano(circInstanciado.GetComponent<ICirculo>().pegaBaseDano(), inimigoHealthBar);
             } else {
                 // invoca função para dar dano no player
                 tomarDano(circInstanciado.GetComponent<ICirculo>().pegaBaseDano(), playerHealthBar);// dano no player de acordo com o que ele ia tirar
