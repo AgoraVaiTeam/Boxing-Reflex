@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class TestadorUnity : MonoBehaviour {
     [SerializeField]
@@ -7,12 +6,10 @@ public class TestadorUnity : MonoBehaviour {
 
     void Update () {
 #if UNITY_EDITOR
-        if (Input.GetKeyDown("d"))
-            mediadorAtaque.botaoAtaque("DIREITA");
-            //mediadorAtaque.botaoAtaque("Right");
-        if (Input.GetKeyDown("a"))
-            mediadorAtaque.botaoAtaque("ESQUERDA");
-            //mediadorAtaque.botaoAtaque("Left");
+        if (Input.GetKeyDown("x"))
+            mediadorAtaque.BotaoAtaque("Right");
+        if (Input.GetKeyDown("z"))
+            mediadorAtaque.BotaoAtaque("Left");
 #endif
     }
 }

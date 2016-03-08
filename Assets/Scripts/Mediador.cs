@@ -19,20 +19,20 @@ public class Mediador : MonoBehaviour {
     }
 
     void Update() {
-        if (!lutando()) {
+        if (!Lutando()) {
             if (playerHealthBar.value <= 100)
                 Debug.Log("Venceu");
             else
                 Debug.Log("perdeu");
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
-        mostraPontos();
+        //mostraPontos();
     }
 
-    void mostraPontos() {
-        mostradorPontos.GetComponent<Text>().text = PlayerPrefs.GetFloat("pontos") + " pontos";
-    }
-    bool lutando() {
+    //void mostraPontos() {
+    //    mostradorPontos.GetComponent<Text>().text = string.Format("{0} pontos", PlayerPrefs.GetFloat("pontos"));
+    //}
+    bool Lutando() {
         return !((playerHealthBar.value >= 100) || (inimigoHealthBar.value >= 100));
     }
 }

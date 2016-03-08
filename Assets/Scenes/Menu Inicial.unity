@@ -295,7 +295,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2037264691}
-        m_MethodName: carregaFase
+        m_MethodName: CarregaFase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

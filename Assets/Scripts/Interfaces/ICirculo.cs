@@ -3,6 +3,6 @@
 public interface ICirculo
 {
     DirectionEnum tipo { get; }
-    float pegaTamanho();
-    float pegaBaseDano();
+    float PegaTamanho();
+    float PegaBaseDano();
 }
