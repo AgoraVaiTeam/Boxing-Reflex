@@ -198,7 +198,7 @@ MonoBehaviour:
   playerHealthBar: {fileID: 1410158266}
   inimigoHealthBar: {fileID: 1145387328}
   intervalo: 2
-  damage: 0
+  damage: 10
 --- !u!4 &205396239
 Transform:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273, y: -140.13}
+  m_AnchoredPosition: {x: -304, y: -151.5}
   m_SizeDelta: {x: 112, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335443974
@@ -287,7 +287,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 205396238}
-        m_MethodName: botaoAtaque
+        m_MethodName: BotaoAtaque
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -799,8 +799,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 2.5, y: 2.3}
+  m_SizeDelta: {x: 5, y: 4.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056034801
 MonoBehaviour:
@@ -899,8 +899,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.5761781, y: 0}
+  m_SizeDelta: {x: 1.1523, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131438185
 MonoBehaviour:
@@ -1015,8 +1015,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000038147, y: 215}
-  m_SizeDelta: {x: 800, y: 44}
+  m_AnchoredPosition: {x: -1.3, y: 215}
+  m_SizeDelta: {x: 802.6, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1244915098
 GameObject:
@@ -1076,8 +1076,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 2.5, y: 0}
+  m_SizeDelta: {x: 5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385007039
 MonoBehaviour:
@@ -1441,8 +1441,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1.0238755, y: 1.8}
+  m_SizeDelta: {x: 4.3522, y: 3.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938529606
 MonoBehaviour:
@@ -1632,7 +1632,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 270, y: -140.13}
+  m_AnchoredPosition: {x: 306, y: -151.5}
   m_SizeDelta: {x: 112, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105454620
@@ -1675,7 +1675,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 205396238}
-        m_MethodName: botaoAtaque
+        m_MethodName: BotaoAtaque
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
