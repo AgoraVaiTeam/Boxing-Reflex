@@ -62,14 +62,14 @@ public class EnemyScript : MonoBehaviour {
     {
         Debug.Log("entrou");
         animadorInimigo.SetBool("socandoDir", true);
-        StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoDir"));
+        //StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoDir"));
 
     }
     public void socaEsq()
     {
         Debug.Log("entrou");
         animadorInimigo.SetBool("socandoEsq", true);
-        StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoEsq"));
+        //StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoEsq"));
 
     }
 
