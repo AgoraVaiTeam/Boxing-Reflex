@@ -15,8 +15,11 @@ public class EnemyScript : MonoBehaviour {
     GameObject abdDir;
     [SerializeField]
     GameObject spriteInimigo;
+    [SerializeField]
+    Animator animadorInimigo;
 
     public float tempoHit;
+    public float tempoSoco;
 
     //public float chanceCabeca;
     //public float chanceOmbroEsq;
@@ -26,10 +29,10 @@ public class EnemyScript : MonoBehaviour {
 
     public void EnemyColorDamage() {
         this.spriteInimigo.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
-        StartCoroutine(AwaitRoutine(this.tempoHit));
+        StartCoroutine(AwaitRoutineVermelho(this.tempoHit));
     }
 
-    IEnumerator AwaitRoutine(float seconds) {
+    IEnumerator AwaitRoutineVermelho(float seconds) {
         yield return new WaitForSeconds(seconds);
         this.spriteInimigo.GetComponent<SpriteRenderer>().color = Color.white;
     }
@@ -53,5 +56,26 @@ public class EnemyScript : MonoBehaviour {
             default:
                 return this.cabeca;
         }
+    }
+
+    public void socaDir()
+    {
+        Debug.Log("entrou");
+        animadorInimigo.SetBool("socandoDir", true);
+        StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoDir"));
+
+    }
+    public void socaEsq()
+    {
+        Debug.Log("entrou");
+        animadorInimigo.SetBool("socandoEsq", true);
+        StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoEsq"));
+
+    }
+
+    IEnumerator AwaitRoutineSoco(float seconds,string booleano)
+    {
+        yield return new WaitForSeconds(seconds);
+        animadorInimigo.SetBool(booleano, false);
     }
 }

@@ -36,6 +36,7 @@ public class MedAtaque : MonoBehaviour {
 
         if ((circInstanciado != null) && 
             (circInstanciado.GetComponent<AbstractCirculo>().PegaTamanho() <= 0.0f)) {
+            //Debug.Log("tomou dano");
             TomarDano(this.damage, playerHealthBar);
             Destroy(circInstanciado);
         }
@@ -56,16 +57,19 @@ public class MedAtaque : MonoBehaviour {
             if (circInstanciado.GetComponent<AbstractCirculo>().tipo == hand) {
                 // invoca função para dar dano no inimigo
                 this.TomarDano(circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano(), inimigoHealthBar);
-
+                if (hand == DirectionEnum.Left)
+                    enemy.GetComponent<EnemyScript>().socaEsq();
+                else
+                    enemy.GetComponent<EnemyScript>().socaDir(); 
                 // Chama a função para trocar a cor do inimigo quando ele tomar dano
                 this.enemy.GetComponent<EnemyScript>().EnemyColorDamage();
             } else {
                 // invoca função para dar dano no player
                 this.TomarDano(circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano(), playerHealthBar);// dano no player de acordo com o que ele ia tirar
             }
-            Debug.Log(circInstanciado);
-            Debug.Log("mão = " + hand);
-            Debug.Log("circ = " + circInstanciado.GetComponent<AbstractCirculo>().tipo);
+            //Debug.Log(circInstanciado);
+            //Debug.Log("mão = " + hand);
+            //Debug.Log("circ = " + circInstanciado.GetComponent<AbstractCirculo>().tipo);
             Destroy(circInstanciado);
         }
     }

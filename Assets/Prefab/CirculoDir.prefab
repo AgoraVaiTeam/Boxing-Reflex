@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Circulo_G: {fileID: 179388}
   MultiBaseDano: 10
-  MaxVelocity: 3
+  MaxVelocity: 1
   MinVelocity: 0.8
 --- !u!212 &21255204
 SpriteRenderer:
