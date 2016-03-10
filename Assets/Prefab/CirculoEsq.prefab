@@ -98,7 +98,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: f7c900ed465614349a3ba7fb9ee5e18a, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: f7c900ed465614349a3ba7fb9ee5e18a, type: 2}
-  - {fileID: 7400000, guid: fb5cc21ad10835347b71c60bd8456dfb, type: 2}
+  - {fileID: 0}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -116,7 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Circulo_G: {fileID: 183702}
   MultiBaseDano: 10
-  MaxVelocity: 1
+  MultiDanoApertaAntes: 10
+  MaxVelocity: 2
   MinVelocity: 0.8
 --- !u!212 &21246190
 SpriteRenderer:

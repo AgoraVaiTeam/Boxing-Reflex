@@ -90,7 +90,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.Agora_Vai_Corp.ReflexBoxing
-  bundleVersion: 0.04
+  bundleVersion: 0.05
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
@@ -158,7 +158,7 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Agora Vai Corp/Boxing-Reflex/Builds/Reflex_Boxing_keystore.keystore
+  AndroidKeystoreName: D:/Agora Vai Corp/Boxing-Reflex - Copia/Builds/Reflex_Boxing_keystore.keystore
   AndroidKeyaliasName: reflex boxing
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -173,7 +173,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: 49ddb146be2cf754bbbd024a77f97397, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []

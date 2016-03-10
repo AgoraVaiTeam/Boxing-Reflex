@@ -2,7 +2,8 @@
 using System.Collections;
 using System;
 
-public class EnemyScript : MonoBehaviour {
+public class EnemyScript : MonoBehaviour
+{
     [SerializeField]
     GameObject cabeca;
     [SerializeField]
@@ -27,22 +28,26 @@ public class EnemyScript : MonoBehaviour {
     //public float chanceAbdEsq;
     //public float chanceAbdDir;
 
-    public void EnemyColorDamage() {
+    public void EnemyColorDamage()
+    {
         this.spriteInimigo.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
         StartCoroutine(AwaitRoutineVermelho(this.tempoHit));
     }
 
-    IEnumerator AwaitRoutineVermelho(float seconds) {
+    IEnumerator AwaitRoutineVermelho(float seconds)
+    {
         yield return new WaitForSeconds(seconds);
         this.spriteInimigo.GetComponent<SpriteRenderer>().color = Color.white;
     }
 
-    public GameObject EnemyBodyPartReturn() {
+    public GameObject EnemyBodyPartReturn()
+    {
         // Converte um número aletório para inteiro
         int randomNumber = Convert.ToInt32(UnityEngine.Random.Range(1, 5));
 
         // Retorna um GameObject baseado no número gerado aleatoriamente
-        switch (randomNumber) {
+        switch (randomNumber)
+        {
             case 1:
                 return this.cabeca;
             case 2:
@@ -60,20 +65,18 @@ public class EnemyScript : MonoBehaviour {
 
     public void socaDir()
     {
-        Debug.Log("entrou");
         animadorInimigo.SetBool("socandoDir", true);
         StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoDir"));
 
     }
     public void socaEsq()
     {
-        Debug.Log("entrou");
         animadorInimigo.SetBool("socandoEsq", true);
         StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoEsq"));
 
     }
 
-    IEnumerator AwaitRoutineSoco(float seconds,string booleano)
+    IEnumerator AwaitRoutineSoco(float seconds, string booleano)
     {
         yield return new WaitForSeconds(seconds);
         animadorInimigo.SetBool(booleano, false);

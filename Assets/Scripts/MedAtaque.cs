@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using Assets.Scripts.Enum;
 
-public class MedAtaque : MonoBehaviour {
+public class MedAtaque : MonoBehaviour
+{
     [SerializeField]
     GameObject circuloAtaqueDireita;
     [SerializeField]
@@ -12,7 +13,9 @@ public class MedAtaque : MonoBehaviour {
     [SerializeField]
     Slider playerHealthBar;
     [SerializeField]
-    Slider inimigoHealthBar;
+    Slider enemyHealthBar;
+    [SerializeField]
+    GameObject canvas;
 
     float time = 0;
     float oldtime = 0;
@@ -23,49 +26,59 @@ public class MedAtaque : MonoBehaviour {
     GameObject oldCircInstanciado;
 
     // Use this for initialization
-    void Update() {
+    void Update()
+    {
         // show de gambiarras ou (instanciado == null)
-        if (time > oldtime + intervalo) {
+        if (time > oldtime + intervalo)
+        {
             oldCircInstanciado = circInstanciado;
             circInstanciado = CriaCirculo();
             Destroy(oldCircInstanciado);
             oldtime = time;
-        } else {
+        }
+        else
+        {
             time = time + Time.deltaTime;
         }
 
-        if ((circInstanciado != null) && 
-            (circInstanciado.GetComponent<AbstractCirculo>().PegaTamanho() <= 0.0f)) {
-            //Debug.Log("tomou dano");
-            TomarDano(this.damage, playerHealthBar);
+        if ((circInstanciado != null) &&
+            (circInstanciado.GetComponent<AbstractCirculo>().PegaTamanho() <= 0.0f))
+        {
+            TomarDano(-this.damage);
             Destroy(circInstanciado);
         }
     }
 
-    private GameObject CriaCirculo() {
+    private GameObject CriaCirculo()
+    {
         var circleObject = ((Random.Range(0.0f, 1.0f) > 0.5f) ? circuloAtaqueDireita : circuloAtaqueEsquerda);
         var bodyPartPosition = this.enemy.GetComponent<EnemyScript>().EnemyBodyPartReturn().transform.position;
 
         return Instantiate(circleObject, bodyPartPosition, Quaternion.identity) as GameObject;
     }
 
-    public void BotaoAtaque(string handString) {
+    public void BotaoAtaque(string handString)
+    {
         // se o circulo estiver instanciado
-        if (circInstanciado != null) {
+        if (circInstanciado != null)
+        {
             // passa parâmetro para enumerador
-            var hand = handString.Contains("Left") ? DirectionEnum.Left : DirectionEnum.Right;
-            if (circInstanciado.GetComponent<AbstractCirculo>().tipo == hand) {
+            DirectionEnum hand = handString.Contains("Left") ? DirectionEnum.Left : DirectionEnum.Right;
+            if (circInstanciado.GetComponent<AbstractCirculo>().tipo == hand)
+            {
                 // invoca função para dar dano no inimigo
-                this.TomarDano(circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano(), inimigoHealthBar);
-                if (hand == DirectionEnum.Left)
-                    enemy.GetComponent<EnemyScript>().socaEsq();
-                else
-                    enemy.GetComponent<EnemyScript>().socaDir(); 
-                // Chama a função para trocar a cor do inimigo quando ele tomar dano
-                this.enemy.GetComponent<EnemyScript>().EnemyColorDamage();
-            } else {
+                // ou no personagem se o dano retornado for negativo
+                this.TomarDano(circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano());
+                if (circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano() > 0)
+                    chamaAnim(hand);
+            }
+            else
+            {
                 // invoca função para dar dano no player
-                this.TomarDano(circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano(), playerHealthBar);// dano no player de acordo com o que ele ia tirar
+                if (circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano() < 0)
+                    this.TomarDano(circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano());// dano no player de acordo com o que ele ia tirar
+                else
+                    this.TomarDano(-circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano());
             }
             //Debug.Log(circInstanciado);
             //Debug.Log("mão = " + hand);
@@ -73,8 +86,34 @@ public class MedAtaque : MonoBehaviour {
             Destroy(circInstanciado);
         }
     }
+    void chamaAnim(DirectionEnum hand)
+    {
+        if (hand == DirectionEnum.Left)
+            enemy.GetComponent<EnemyScript>().socaEsq();
+        else
+            enemy.GetComponent<EnemyScript>().socaDir();
+    }
 
-    void TomarDano(float dano, Slider barra) {
-        barra.value += dano;
+    void playerDmageAnimation()
+    {
+        canvas.GetComponent<Animation>().Play();
+        Handheld.Vibrate();
+    }
+
+
+    void TomarDano(float dano)
+    {
+        if (dano < 0)
+        {
+            Debug.Log("Primeiro");
+            playerHealthBar.value += -dano;
+            playerDmageAnimation();
+        }
+        else
+        {
+            enemy.GetComponent<EnemyScript>().EnemyColorDamage();
+            Debug.Log("segundo");
+            enemyHealthBar.value += dano;
+        }
     }
 }

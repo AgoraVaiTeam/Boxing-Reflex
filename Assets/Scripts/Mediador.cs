@@ -1,25 +1,36 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Mediador : MonoBehaviour {
+public class Mediador : MonoBehaviour
+{
     [SerializeField]
     Slider playerHealthBar;
     [SerializeField]
     Slider inimigoHealthBar;
     [SerializeField]
     Text mostradorPontos;
+    [SerializeField]
+    GameObject canvasGame;
+    [SerializeField]
+    GameObject canvasPause;
 
     float pontosDoJogador;
     float pontoDoCirculo;
 
+    bool paused;
+
     bool rodando;
 
-    void Start() {
+    void Start()
+    {
+        paused = false;
         PlayerPrefs.SetFloat("pontos", 0);
     }
 
-    void Update() {
-        if (!Lutando()) {
+    void Update()
+    {
+        if (!Lutando())
+        {
             if (playerHealthBar.value <= 100)
                 Debug.Log("Venceu");
             else
@@ -32,7 +43,15 @@ public class Mediador : MonoBehaviour {
     //void mostraPontos() {
     //    mostradorPontos.GetComponent<Text>().text = string.Format("{0} pontos", PlayerPrefs.GetFloat("pontos"));
     //}
-    bool Lutando() {
+    bool Lutando()
+    {
         return !((playerHealthBar.value >= 100) || (inimigoHealthBar.value >= 100));
+    }
+
+    void botaoPause()
+    {
+        canvasGame.SetActive(!paused);
+        canvasPause.SetActive(paused);
+        paused = !paused;
     }
 }
