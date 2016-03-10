@@ -32,7 +32,7 @@ abstract public class AbstractCirculo : MonoBehaviour
             //Debug.Log("entrou no circuulo" + ((this.Circulo_G.transform.localScale.x ) * MultiDanoApertaAntes));
             return -((this.Circulo_G.transform.localScale.x) * MultiDanoApertaAntes);
         }
-        else if (this.Circulo_G.transform.localScale.x <= 0.1f)
+        else if (this.Circulo_G.transform.localScale.x == 0.3f)
             return 1 * this.MultiBaseDano * 2;
         return (1 - Circulo_G.transform.localScale.x) * this.MultiBaseDano;
     }

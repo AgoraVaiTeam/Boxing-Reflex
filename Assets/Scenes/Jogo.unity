@@ -218,6 +218,18 @@ Prefab:
       propertyPath: m_Animations.Array.data[1]
       value: 
       objectReference: {fileID: 7400000, guid: fb5cc21ad10835347b71c60bd8456dfb, type: 2}
+    - target: {fileID: 467490, guid: 56519ca53ee547643aec39c28b33701c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.600692
+      objectReference: {fileID: 0}
+    - target: {fileID: 467490, guid: 56519ca53ee547643aec39c28b33701c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.600692
+      objectReference: {fileID: 0}
+    - target: {fileID: 467490, guid: 56519ca53ee547643aec39c28b33701c, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.600692
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56519ca53ee547643aec39c28b33701c, type: 2}
   m_IsPrefabParent: 0
@@ -1321,7 +1333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &766386212
 Transform:
   m_ObjectHideFlags: 0

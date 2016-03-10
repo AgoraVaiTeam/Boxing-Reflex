@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 478680}
   - 212: {fileID: 21266086}
+  - 95: {fileID: 9585046}
   m_Layer: 0
   m_Name: circulo_p
   m_TagString: Untagged
@@ -68,8 +69,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.56252706, y: 0.56252646, z: 0.56252646}
+  m_LocalPosition: {x: -0.01, y: -0, z: 0}
+  m_LocalScale: {x: 1.6006916, y: 1.6006899, z: 1.6006899}
   m_Children: []
   m_Father: {fileID: 498928}
   m_RootOrder: 1
@@ -87,6 +88,23 @@ Transform:
   - {fileID: 478680}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!95 &9585046
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148698}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 25938c4cdbb5e534ca2f303648961884, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!111 &11136272
 Animation:
   m_ObjectHideFlags: 1
