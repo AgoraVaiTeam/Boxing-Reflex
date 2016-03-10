@@ -90,14 +90,14 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.Agora_Vai_Corp.ReflexBoxing
-  bundleVersion: 0.06
+  bundleVersion: 0.07
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: f0f15cba7cbf57449ab131f85e890860
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 4
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 

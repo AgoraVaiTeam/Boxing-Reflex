@@ -16,6 +16,10 @@ public class MedAtaque : MonoBehaviour
     Slider enemyHealthBar;
     [SerializeField]
     GameObject canvas;
+    [SerializeField]
+    AudioSource DamageGiven;
+    [SerializeField]
+    AudioSource DamageRecieved;
 
     float time = 0;
     float oldtime = 0;
@@ -107,17 +111,19 @@ public class MedAtaque : MonoBehaviour
 
     void TomarDano(float dano)
     {
-        if (dano < 0)
+        if (dano < 0) //dano no jogador
         {
             //Debug.Log("Primeiro");
             playerHealthBar.value += -dano;
             playerDmageAnimation();
+            DamageRecieved.Play();
         }
-        else
+        else //dano no inimigo
         {
             enemy.GetComponent<EnemyScript>().EnemyColorDamage();
             //Debug.Log("segundo");
             enemyHealthBar.value += dano;
+            DamageGiven.Play();
         }
     }
 }

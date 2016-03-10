@@ -13,6 +13,10 @@ public class Mediador : MonoBehaviour
     GameObject canvasGame;
     [SerializeField]
     GameObject canvasPause;
+    [SerializeField]
+    Animation fadeAnimation;
+    [SerializeField]
+    AudioSource fadeSound;
 
     float pontosDoJogador;
     float pontoDoCirculo;
@@ -21,8 +25,10 @@ public class Mediador : MonoBehaviour
 
     bool rodando;
 
+    bool acabou = false;
     void Start()
     {
+ 
         paused = false;
         PlayerPrefs.SetFloat("pontos", 0);
     }
@@ -31,15 +37,21 @@ public class Mediador : MonoBehaviour
     {
         if (!Lutando())
         {
-            if (playerHealthBar.value <= 0) {
-                Debug.Log("Venceu");
-                PlayerPrefs.SetInt("Win", 1);
+            if (playerHealthBar.value == 100) {
+                PlayerPrefs.SetInt("Win", 0);
+                //Debug.Log("perdeu");
             }
             else {
-                PlayerPrefs.SetInt("Win", 0);
-                Debug.Log("perdeu");
+                //Debug.Log("Venceu");
+                PlayerPrefs.SetInt("Win", 1);
             }
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Final do Jogo");
+            if (!acabou) {
+                fadeAnimation.Play();
+                acabou = true;
+            }
+            //fadeSound.Play();
+            GetComponent<AudioSource>().Pause();
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("Final do Jogo");
         }
         //mostraPontos();
     }
@@ -56,9 +68,10 @@ public class Mediador : MonoBehaviour
     //-------------------------------------------- Botões pause e afins-------------   
     public void PauseButton()
     {
-        canvasGame.SetActive(!paused);
-        canvasPause.SetActive(paused);
         paused = !paused;
+        //canvasGame.SetActive(!paused);
+        canvasPause.SetActive(paused);
+        Time.timeScale = paused ? 0 : 1; //para o tempo do jogo quando o jogo está pausado
     }
 
     public void QuitButton()
