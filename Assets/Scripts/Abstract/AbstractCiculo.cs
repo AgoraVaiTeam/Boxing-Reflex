@@ -27,7 +27,7 @@ abstract public class AbstractCirculo : MonoBehaviour
 
     public float PegaBaseDano()
     {
-        if (this.Circulo_G.transform.localScale.x >= 0.6f)
+        if (this.Circulo_G.transform.localScale.x >= 0.3f)
         {
             //Debug.Log("entrou no circuulo" + ((this.Circulo_G.transform.localScale.x ) * MultiDanoApertaAntes));
             return -((this.Circulo_G.transform.localScale.x) * MultiDanoApertaAntes);
