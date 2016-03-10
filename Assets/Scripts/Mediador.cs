@@ -48,10 +48,22 @@ public class Mediador : MonoBehaviour
         return !((playerHealthBar.value >= 100) || (inimigoHealthBar.value >= 100));
     }
 
-    void botaoPause()
+
+    //-------------------------------------------- Botões pause e afins-------------   
+    public void PauseButton()
     {
         canvasGame.SetActive(!paused);
         canvasPause.SetActive(paused);
         paused = !paused;
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
+
+    public void BeginningButton()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu Inicial");
     }
 }

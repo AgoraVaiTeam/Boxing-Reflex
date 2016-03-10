@@ -25,6 +25,12 @@ public class MedAtaque : MonoBehaviour
     GameObject circInstanciado;
     GameObject oldCircInstanciado;
 
+    void Awake()
+    {
+        enemyHealthBar.interactable =  false;
+        playerHealthBar.interactable = false;
+    }
+
     // Use this for initialization
     void Update()
     {
@@ -48,12 +54,10 @@ public class MedAtaque : MonoBehaviour
             Destroy(circInstanciado);
         }
     }
-
     private GameObject CriaCirculo()
     {
         var circleObject = ((Random.Range(0.0f, 1.0f) > 0.5f) ? circuloAtaqueDireita : circuloAtaqueEsquerda);
         var bodyPartPosition = this.enemy.GetComponent<EnemyScript>().EnemyBodyPartReturn().transform.position;
-
         return Instantiate(circleObject, bodyPartPosition, Quaternion.identity) as GameObject;
     }
 
