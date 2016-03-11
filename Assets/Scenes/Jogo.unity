@@ -568,8 +568,8 @@ MonoBehaviour:
   canvas: {fileID: 1990872857}
   DamageGiven: {fileID: 107159688}
   DamageRecieved: {fileID: 1990872862}
-  intervalo: 1.5
-  damage: 50
+  intervalo: 1.25
+  damage: 25
 --- !u!4 &205396239
 Transform:
   m_ObjectHideFlags: 0

@@ -28,6 +28,7 @@ public class Mediador : MonoBehaviour
     bool acabou = false;
     void Start()
     {
+		Time.timeScale = 1;
  
         paused = false;
         PlayerPrefs.SetFloat("pontos", 0);
