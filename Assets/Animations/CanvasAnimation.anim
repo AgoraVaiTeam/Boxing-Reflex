@@ -20,54 +20,54 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 215
-        inSlope: -240
-        outSlope: -240
-        tangentMode: 10
-      - time: 0.041666668
-        value: 205
-        inSlope: 108
-        outSlope: 108
+        value: 167
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: 224
-        inSlope: 114.31579
-        outSlope: 114.31579
+        value: 156
+        inSlope: 42
+        outSlope: 42
         tangentMode: 10
-      - time: 0.12291667
-        value: 215
-        inSlope: -227.36842
-        outSlope: -227.36842
+      - time: 0.16666667
+        value: 174
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
+        value: 167
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: InimigoHealth
+    path: Pause
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -151.5
-        inSlope: -228
-        outSlope: -228
-        tangentMode: 10
-      - time: 0.041666668
-        value: -161
-        inSlope: 114
-        outSlope: 114
+        value: -138
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: -142
-        inSlope: 114.31579
-        outSlope: 114.31579
+        value: -149
+        inSlope: 42
+        outSlope: 42
         tangentMode: 10
-      - time: 0.12291667
-        value: -151
-        inSlope: -227.36842
-        outSlope: -227.36842
+      - time: 0.16666667
+        value: -131
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
+        value: -138
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -80,24 +80,24 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -151.5
-        inSlope: -228
-        outSlope: -228
-        tangentMode: 10
-      - time: 0.041666668
-        value: -161
-        inSlope: 114
-        outSlope: 114
+        value: -138
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: -142
-        inSlope: 114.31579
-        outSlope: 114.31579
+        value: -149
+        inSlope: 42
+        outSlope: 42
         tangentMode: 10
-      - time: 0.12291667
-        value: -151
-        inSlope: -227.36842
-        outSlope: -227.36842
+      - time: 0.16666667
+        value: -131
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
+        value: -138
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -111,23 +111,23 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: -216
-        inSlope: -240
-        outSlope: -240
-        tangentMode: 10
-      - time: 0.041666668
-        value: -226
-        inSlope: 108
-        outSlope: 108
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: -207
-        inSlope: 114.31579
-        outSlope: 114.31579
+        value: -227
+        inSlope: 42
+        outSlope: 42
         tangentMode: 10
-      - time: 0.12291667
+      - time: 0.16666667
+        value: -209
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
         value: -216
-        inSlope: -227.36842
-        outSlope: -227.36842
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -140,100 +140,30 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -1.3
-        inSlope: 55.199997
-        outSlope: 55.199997
-        tangentMode: 10
-      - time: 0.041666668
-        value: 1
-        inSlope: 27.599998
-        outSlope: 27.599998
+        value: 215
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        value: 204
+        inSlope: 42
+        outSlope: 42
+        tangentMode: 10
+      - time: 0.16666667
+        value: 222
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
+        value: 215
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
+    attribute: m_AnchoredPosition.y
     path: InimigoHealth
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 306
-        inSlope: 48
-        outSlope: 48
-        tangentMode: 10
-      - time: 0.041666668
-        value: 308
-        inSlope: 24
-        outSlope: 24
-        tangentMode: 10
-      - time: 0.083333336
-        value: 308
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: "Bot\xE3o Direita"
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: -304
-        inSlope: 48
-        outSlope: 48
-        tangentMode: 10
-      - time: 0.041666668
-        value: -302
-        inSlope: 24
-        outSlope: 24
-        tangentMode: 10
-      - time: 0.083333336
-        value: -302
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: "Bot\xE3o Esquerda"
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 48
-        outSlope: 48
-        tangentMode: 10
-      - time: 0.041666668
-        value: 2
-        inSlope: 24
-        outSlope: 24
-        tangentMode: 10
-      - time: 0.083333336
-        value: 2
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: PlayerHealth
     classID: 224
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -250,7 +180,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.12291667
+    m_StopTime: 0.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -270,54 +200,54 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 215
-        inSlope: -240
-        outSlope: -240
-        tangentMode: 10
-      - time: 0.041666668
-        value: 205
-        inSlope: 108
-        outSlope: 108
+        value: 167
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: 224
-        inSlope: 114.31579
-        outSlope: 114.31579
+        value: 156
+        inSlope: 42
+        outSlope: 42
         tangentMode: 10
-      - time: 0.12291667
-        value: 215
-        inSlope: -227.36842
-        outSlope: -227.36842
+      - time: 0.16666667
+        value: 174
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
+        value: 167
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: InimigoHealth
+    path: Pause
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -151.5
-        inSlope: -228
-        outSlope: -228
-        tangentMode: 10
-      - time: 0.041666668
-        value: -161
-        inSlope: 114
-        outSlope: 114
+        value: -138
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: -142
-        inSlope: 114.31579
-        outSlope: 114.31579
+        value: -149
+        inSlope: 42
+        outSlope: 42
         tangentMode: 10
-      - time: 0.12291667
-        value: -151
-        inSlope: -227.36842
-        outSlope: -227.36842
+      - time: 0.16666667
+        value: -131
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
+        value: -138
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -330,24 +260,24 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -151.5
-        inSlope: -228
-        outSlope: -228
-        tangentMode: 10
-      - time: 0.041666668
-        value: -161
-        inSlope: 114
-        outSlope: 114
+        value: -138
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: -142
-        inSlope: 114.31579
-        outSlope: 114.31579
+        value: -149
+        inSlope: 42
+        outSlope: 42
         tangentMode: 10
-      - time: 0.12291667
-        value: -151
-        inSlope: -227.36842
-        outSlope: -227.36842
+      - time: 0.16666667
+        value: -131
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
+        value: -138
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -361,23 +291,23 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: -216
-        inSlope: -240
-        outSlope: -240
-        tangentMode: 10
-      - time: 0.041666668
-        value: -226
-        inSlope: 108
-        outSlope: 108
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: -207
-        inSlope: 114.31579
-        outSlope: 114.31579
+        value: -227
+        inSlope: 42
+        outSlope: 42
         tangentMode: 10
-      - time: 0.12291667
+      - time: 0.16666667
+        value: -209
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
         value: -216
-        inSlope: -227.36842
-        outSlope: -227.36842
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -390,100 +320,30 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -1.3
-        inSlope: 55.199997
-        outSlope: 55.199997
-        tangentMode: 10
-      - time: 0.041666668
-        value: 1
-        inSlope: 27.599998
-        outSlope: 27.599998
+        value: 215
+        inSlope: -132
+        outSlope: -132
         tangentMode: 10
       - time: 0.083333336
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        value: 204
+        inSlope: 42
+        outSlope: 42
+        tangentMode: 10
+      - time: 0.16666667
+        value: 222
+        inSlope: 66
+        outSlope: 66
+        tangentMode: 10
+      - time: 0.25
+        value: 215
+        inSlope: -84.00001
+        outSlope: -84.00001
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
+    attribute: m_AnchoredPosition.y
     path: InimigoHealth
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 306
-        inSlope: 48
-        outSlope: 48
-        tangentMode: 10
-      - time: 0.041666668
-        value: 308
-        inSlope: 24
-        outSlope: 24
-        tangentMode: 10
-      - time: 0.083333336
-        value: 308
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: "Bot\xE3o Direita"
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: -304
-        inSlope: 48
-        outSlope: 48
-        tangentMode: 10
-      - time: 0.041666668
-        value: -302
-        inSlope: 24
-        outSlope: 24
-        tangentMode: 10
-      - time: 0.083333336
-        value: -302
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: "Bot\xE3o Esquerda"
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 48
-        outSlope: 48
-        tangentMode: 10
-      - time: 0.041666668
-        value: 2
-        inSlope: 24
-        outSlope: 24
-        tangentMode: 10
-      - time: 0.083333336
-        value: 2
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: PlayerHealth
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []

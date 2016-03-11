@@ -8,11 +8,18 @@ public class EndGameScript : MonoBehaviour {
     GameObject LoseText;
     [SerializeField]
     GameObject EndGameAd;
+    [SerializeField]
+    GameObject Easter;
 
     // Use this for initialization
     void Start() {
         int randomAdNumber = Random.Range(1, 10);
+        float randomEasterNumber = Random.Range(0.0f, 100.0f);
 
+        if (randomEasterNumber > 99.9) {
+            Easter.SetActive(true);
+            return;
+        }
         if (PlayerPrefs.GetInt("Win") == 1)
             VictoryText.SetActive(true);
         else {

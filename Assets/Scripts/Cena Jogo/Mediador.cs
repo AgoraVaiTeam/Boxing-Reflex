@@ -38,7 +38,7 @@ public class Mediador : MonoBehaviour
     {
         if (!Lutando())
         {
-            if (playerHealthBar.value == 100) {
+            if (playerHealthBar.value == playerHealthBar.maxValue) {
                 PlayerPrefs.SetInt("Win", 0);
                 //Debug.Log("perdeu");
             }
@@ -62,7 +62,7 @@ public class Mediador : MonoBehaviour
     //}
     bool Lutando()
     {
-        return !((playerHealthBar.value >= 100) || (inimigoHealthBar.value >= 100));
+        return !((playerHealthBar.value >= playerHealthBar.maxValue) || (inimigoHealthBar.value >= inimigoHealthBar.maxValue));
     }
 
 
@@ -70,7 +70,7 @@ public class Mediador : MonoBehaviour
     public void PauseButton()
     {
         paused = !paused;
-        //canvasGame.SetActive(!paused);
+        canvasGame.SetActive(!paused);
         canvasPause.SetActive(paused);
         Time.timeScale = paused ? 0 : 1; //para o tempo do jogo quando o jogo está pausado
     }
