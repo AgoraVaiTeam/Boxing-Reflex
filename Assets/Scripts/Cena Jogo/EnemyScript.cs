@@ -2,8 +2,7 @@
 using System.Collections;
 using System;
 
-public class EnemyScript : MonoBehaviour
-{
+public class EnemyScript : MonoBehaviour {
     [SerializeField]
     GameObject cabeca;
     [SerializeField]
@@ -15,11 +14,10 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]
     GameObject abdDir;
     [SerializeField]
-    GameObject spriteInimigo;
+    Animator animatorInimigo;
     [SerializeField]
-    Animator animadorInimigo;
+    Animator animatorHands;
 
-    public float tempoHit;
     public float tempoSoco;
 
     //public float chanceCabeca;
@@ -28,26 +26,12 @@ public class EnemyScript : MonoBehaviour
     //public float chanceAbdEsq;
     //public float chanceAbdDir;
 
-    public void EnemyColorDamage()
-    {
-        this.spriteInimigo.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
-        StartCoroutine(AwaitRoutineVermelho(this.tempoHit));
-    }
-
-    IEnumerator AwaitRoutineVermelho(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        this.spriteInimigo.GetComponent<SpriteRenderer>().color = Color.white;
-    }
-
-    public GameObject EnemyBodyPartReturn()
-    {
+    public GameObject EnemyBodyPartReturn() {
         // Converte um número aletório para inteiro
         int randomNumber = Convert.ToInt32(UnityEngine.Random.Range(1, 5));
 
         // Retorna um GameObject baseado no número gerado aleatoriamente
-        switch (randomNumber)
-        {
+        switch (randomNumber) {
             case 1:
                 return this.cabeca;
             case 2:
@@ -63,22 +47,29 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    public void socaDir()
-    {
-        animadorInimigo.SetBool("socandoDir", true);
-        StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoDir"));
-
-    }
-    public void socaEsq()
-    {
-        animadorInimigo.SetBool("socandoEsq", true);
-        StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoEsq"));
-
+    public void InimigoBatendo() {
+        animatorInimigo.SetBool("Batendo", true);
+        StartCoroutine(AwaitRoutineSoco(tempoSoco, "Batendo", animatorInimigo));
     }
 
-    IEnumerator AwaitRoutineSoco(float seconds, string booleano)
-    {
+    public void InimigoApanhando() {
+        animatorInimigo.SetBool("Apanhando", true);
+        StartCoroutine(AwaitRoutineSoco(tempoSoco, "Apanhando", animatorInimigo));
+    }
+
+    public void socaDir() {
+        animatorHands.SetBool("socandoDir", true);
+        StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoDir", animatorHands));
+
+    }
+    public void socaEsq() {
+        animatorHands.SetBool("socandoEsq", true);
+        StartCoroutine(AwaitRoutineSoco(tempoSoco, "socandoEsq", animatorHands));
+
+    }
+
+    IEnumerator AwaitRoutineSoco(float seconds, string booleanName, Animator animator) {
         yield return new WaitForSeconds(seconds);
-        animadorInimigo.SetBool(booleano, false);
+        animator.SetBool(booleanName, false);
     }
 }

@@ -6,17 +6,18 @@ public class EndGameScript : MonoBehaviour {
     GameObject VictoryText;
     [SerializeField]
     GameObject LoseText;
+    [SerializeField]
+    GameObject EndGameAd;
+
     // Use this for initialization
     void Start() {
         int randomAdNumber = Random.Range(1, 10);
-
-        var endGameAd = new EndGameAd();
 
         if (PlayerPrefs.GetInt("Win") == 1)
             VictoryText.SetActive(true);
         else {
             if (randomAdNumber > 5)
-                endGameAd.ShowAd();
+                EndGameAd.GetComponent<EndGameAd>().ShowAd();
             LoseText.SetActive(true);
         }
     }

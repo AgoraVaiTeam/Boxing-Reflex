@@ -2,8 +2,7 @@
 using UnityEngine.UI;
 using Assets.Scripts.Enum;
 
-public class MedAtaque : MonoBehaviour
-{
+public class MedAtaque : MonoBehaviour {
     [SerializeField]
     GameObject circuloAtaqueDireita;
     [SerializeField]
@@ -29,59 +28,47 @@ public class MedAtaque : MonoBehaviour
     GameObject circInstanciado;
     GameObject oldCircInstanciado;
 
-    void Awake()
-    {
-        enemyHealthBar.interactable =  false;
+    void Awake() {
+        enemyHealthBar.interactable = false;
         playerHealthBar.interactable = false;
     }
 
     // Use this for initialization
-    void Update()
-    {
+    void Update() {
         // show de gambiarras ou (instanciado == null)
-        if (time > oldtime + intervalo)
-        {
+        if (time > oldtime + intervalo) {
             oldCircInstanciado = circInstanciado;
             circInstanciado = CriaCirculo();
             Destroy(oldCircInstanciado);
             oldtime = time;
-        }
-        else
-        {
+        } else {
             time = time + Time.deltaTime;
         }
 
         if ((circInstanciado != null) &&
-            (circInstanciado.GetComponent<AbstractCirculo>().PegaTamanho() <= 0.0f))
-        {
+            (circInstanciado.GetComponent<AbstractCirculo>().PegaTamanho() <= 0.0f)) {
             TomarDano(-this.damage);
             Destroy(circInstanciado);
         }
     }
-    private GameObject CriaCirculo()
-    {
+    private GameObject CriaCirculo() {
         var circleObject = ((Random.Range(0.0f, 1.0f) > 0.5f) ? circuloAtaqueDireita : circuloAtaqueEsquerda);
         var bodyPartPosition = this.enemy.GetComponent<EnemyScript>().EnemyBodyPartReturn().transform.position;
         return Instantiate(circleObject, bodyPartPosition, Quaternion.identity) as GameObject;
     }
 
-    public void BotaoAtaque(string handString)
-    {
+    public void BotaoAtaque(string handString) {
         // se o circulo estiver instanciado
-        if (circInstanciado != null)
-        {
+        if (circInstanciado != null) {
             // passa parâmetro para enumerador
             DirectionEnum hand = handString.Contains("Left") ? DirectionEnum.Left : DirectionEnum.Right;
-            if (circInstanciado.GetComponent<AbstractCirculo>().tipo == hand)
-            {
+            if (circInstanciado.GetComponent<AbstractCirculo>().tipo == hand) {
                 // invoca função para dar dano no inimigo
                 // ou no personagem se o dano retornado for negativo
                 this.TomarDano(circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano());
                 if (circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano() > 0)
                     chamaAnim(hand);
-            }
-            else
-            {
+            } else {
                 // invoca função para dar dano no player
                 if (circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano() < 0)
                     this.TomarDano(circInstanciado.GetComponent<AbstractCirculo>().PegaBaseDano());// dano no player de acordo com o que ele ia tirar
@@ -94,33 +81,30 @@ public class MedAtaque : MonoBehaviour
             Destroy(circInstanciado);
         }
     }
-    void chamaAnim(DirectionEnum hand)
-    {
+    void chamaAnim(DirectionEnum hand) {
         if (hand == DirectionEnum.Left)
             enemy.GetComponent<EnemyScript>().socaEsq();
         else
             enemy.GetComponent<EnemyScript>().socaDir();
     }
 
-    void playerDmageAnimation()
-    {
+    void playerDmageAnimation() {
         canvas.GetComponent<Animation>().Play();
         Handheld.Vibrate();
     }
 
 
-    void TomarDano(float dano)
-    {
+    void TomarDano(float dano) {
         if (dano < 0) //dano no jogador
         {
             //Debug.Log("Primeiro");
             playerHealthBar.value += -dano;
             playerDmageAnimation();
             DamageRecieved.Play();
-        }
-        else //dano no inimigo
-        {
-            enemy.GetComponent<EnemyScript>().EnemyColorDamage();
+            enemy.GetComponent<EnemyScript>().InimigoBatendo();
+        } else //dano no inimigo
+          {
+            enemy.GetComponent<EnemyScript>().InimigoApanhando();
             //Debug.Log("segundo");
             enemyHealthBar.value += dano;
             DamageGiven.Play();

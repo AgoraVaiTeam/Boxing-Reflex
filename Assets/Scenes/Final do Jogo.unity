@@ -278,6 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VictoryText: {fileID: 1847223912}
   LoseText: {fileID: 1578408544}
+  EndGameAd: {fileID: 1083470643}
 --- !u!1 &1042518596
 GameObject:
   m_ObjectHideFlags: 0
