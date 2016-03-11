@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Circulo_G: {fileID: 183702}
+  Circulo_P: {fileID: 148698}
   MultiBaseDano: 10
   MultiDanoApertaAntes: 10
   MaxVelocity: 2
